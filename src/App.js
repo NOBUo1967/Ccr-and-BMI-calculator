@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./styles.css";
+import {OutputArea} from "./components/outputArea"
 
 export const Calculator = () => {
   const [age, setAge] = useState("");
@@ -77,16 +78,10 @@ export const Calculator = () => {
         <button onClick={onClickCalc}>計算</button>
       </div>
       <br />
-      <div className="output-area">
-        <div>
-          <p>BMI</p>
-          <p>{bmi}</p>
-        </div>
-        <div>
-          <p>クレアチニンクリアランス</p>
-          <p>{ccr}mL/min</p>
-        </div>
-      </div>
+      <OutputArea 
+        bmi={bmi}
+        ccr={ccr}
+      />
     </Fragment>
   );
 };
