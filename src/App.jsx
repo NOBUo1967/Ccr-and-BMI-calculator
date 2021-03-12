@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./styles.css";
 import { OutputArea } from "./components/outputArea";
+import { InputForm } from "./components/inputForm";
 
 export const App = () => {
   const [age, setAge] = useState("");
@@ -38,22 +39,26 @@ export const App = () => {
   return (
     <Fragment>
       <div className="input-area">
-        <div>
-          <p>年齢(歳)</p>
-          <input placeholder="ex) 60" onChange={onChangeAge} />
-        </div>
-        <div>
-          <p>身長(m)</p>
-          <input placeholder="ex) 1.6" onChange={onChangeHeight} />
-        </div>
-        <div>
-          <p>体重(kg)</p>
-          <input placeholder="ex) 60" onChange={onChangeWeight} />
-        </div>
-        <div>
-          <p>血清クレアチニン値(mg/dL)</p>
-          <input placeholder="ex) 0.6" onChange={onChangeCreatinine} />
-        </div>
+        <InputForm
+          label={"年齢(歳)"}
+          placeholder={"ex) 60"}
+          onChange={onChangeAge}
+        />
+        <InputForm
+          label={"身長(m)"}
+          placeholder={"ex) 1.6"}
+          onChange={onChangeHeight}
+        />
+        <InputForm
+          label={"体重(kg)"}
+          placeholder={"ex) 60"}
+          onChange={onChangeWeight}
+        />
+        <InputForm
+          label={"血清クレアチニン値(mg/dL)"}
+          placeholder={"ex) 0.6"}
+          onChange={onChangeCreatinine}
+        />
         <div>
           <p>性別</p>
           <label>
