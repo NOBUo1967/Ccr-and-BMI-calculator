@@ -27,7 +27,7 @@ export const App = () => {
   };
 
   const calcBmi = () => {
-    const newBmi = Math.round(weight / (height * height));
+    const newBmi = Math.round(weight / (height * height)*10)/10;
     setBmi(newBmi);
   };
 
